@@ -3,7 +3,7 @@ using Microsoft.JSInterop;
 
 namespace TextEditor.Components
 {
-    public partial class RichEditor : ComponentBase
+    public partial class Editor : ComponentBase
 {
     [Inject]
     protected IJSRuntime JSRuntime { get; set; }
