@@ -1,0 +1,35 @@
+@page "/calculator"
+@rendermode InteractiveServer
+@using Calculator.Components
+<link rel="stylesheet" href="Calculator.styles.css" />
+
+
+    <PageTitle>Калькулятор</PageTitle>
+<div class="calculatorContainer">
+<h3> Калькулятор</h3>
+
+<input type="text" class="displayScreen" value="@expression" readonly />
+<div class="buttonsGrid">
+<button @onclick='() => AddToExpression("7")'>7</button>
+<button @onclick='() => AddToExpression("8")'>8</button>
+<button @onclick='() => AddToExpression("9")'>9</button>
+<button class="opBtn" @onclick='()=> AddToExpression("/")'>/</button>
+
+<button @onclick='() => AddToExpression("4")'>4</button>
+<button @onclick='() => AddToExpression("5")'>5</button>
+<button @onclick='() => AddToExpression("6")'>6</button>
+<button class="opBtn" @onclick='()=> AddToExpression("*")'>*</button>
+
+<button @onclick='() => AddToExpression("1")'>1</button>
+<button @onclick='() => AddToExpression("2")'>2</button>
+<button @onclick='() => AddToExpression("3")'>3</button>
+<button class="opBtn" @onclick='()=> AddToExpression("-")'>-</button>
+
+<button class="clearBtn" @onclick="Clear">C</button>
+<button @onclick='() => AddToExpression("0")'>0</button>
+<button class="equalBtn" @onclick="CalculateResult">=</button>
+<button class="opBtn" @onclick='() => AddToExpression("+")'>+</button>
+</div>
+
+</div>
+ 
