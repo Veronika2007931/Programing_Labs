@@ -1,0 +1,40 @@
+@page "/texteditor"
+@rendermode InteractiveServer
+@using TextEditor.Components
+<link rel="stylesheet" href=TextEditor.styles.css" />
+
+<div class="editor-wrapper">
+    <div class="toolbar">
+        <button class="btn-style" @onclick="MakeBold"><b>B</b></button>
+        <button class="btn-style" @onclick="MakeItalic"><i>I</i></button>
+        <button class="btn-style" @onclick="MakeUnderline"><u>U</u></button>
+
+        <select class="btn-style" @onchange="ChangeSize">
+            <option value="3">Нормальний</option>
+            <option value="1">Маленький</option>
+            <option value="5">Великий</option>
+            <option value="7">Гігантський</option>
+        </select> 
+
+        <select class="btn-style" @onchange="ChangeColor">
+            <option value="black">Чорний</option>
+            <option value="red">Червоний</option>
+            <option value="blue">Синій</option>
+            <option value="green">Зелений</option>
+            <option value="#ff00ff">Маджента</option>
+            
+        </select>
+    </div>
+
+    <div id="editor-area" contenteditable="true">
+        Привіт! Спробуй виділити цей текст і натиснути <b>B</b> або змінити колір.
+    </div>
+</div>
+
+<script>
+    window.editorActions = {
+        execCmd: function (command, value) {
+            document.execCommand(command, false, value);
+        }
+    };
+</script>

@@ -1,0 +1,36 @@
+.editorWrapper {
+        width: 800px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .toolbar {
+        background: #f0f0f0;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btnStyle {
+        padding: 5px 10px;
+        cursor: pointer;
+        font-weight: bold;
+        background: white;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+    }
+    .btnStyle:hover { background: #e0e0e0; }
+
+   
+    #editorArea {
+        height: 400px;
+        padding: 20px;
+        overflow-y: auto;
+        outline: none; 
+        font-size: 16px;
+    }
